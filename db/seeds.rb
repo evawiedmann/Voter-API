@@ -15,12 +15,12 @@ class Seed
   def generate_states
     20.times do |i|
       state = State.create!(
-        name: Faker::Book.author,
-        check_reg: Faker::Movie.state
-        register: Faker::Movie.state
-        absentee: Faker::Movie.state
-        next_election: Faker::Movie.state
-        reg_deadlines: Faker::Movie.state
+        name: Faker::Address.state,
+        check_reg: Faker::Verb.past_participle,
+        register: Faker::Verb.base,
+        absentee: Faker::GreekPhilosophers.quote,
+        next_election: Faker::Construction.heavy_equipment,
+        reg_deadlines: Faker::Space.distance_measurement
       )
       # puts "State #{i}: Author is #{state.name} and quotation is '#{state.check_reg}'."
     end
