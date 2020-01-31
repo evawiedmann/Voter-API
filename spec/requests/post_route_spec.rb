@@ -3,15 +3,15 @@ require 'rails_helper'
 describe "post a state route", :type => :request do
 
   before do
-    post '/states', params: { :author => 'test_author', :content => 'test_content' }
+    post '/states', params: { :name => 'test_name', :content => 'test_content' }
   end
 
-  it 'returns the author name' do
-    expect(JSON.parse(response.body)['author']).to eq('test_author')
+  it 'returns the state name' do
+    expect(JSON.parse(response.body)['name']).to eq('test_name')
   end
 
-  it 'returns the state content' do
-    expect(JSON.parse(response.body)['content']).to eq('test_content')
+  it 'returns the state check registration information' do
+    expect(JSON.parse(response.body)['check_reg']).to eq('test_check_reg')
   end
 
   it 'returns a created status' do
