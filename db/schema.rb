@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_31_194926) do
+ActiveRecord::Schema.define(version: 2020_02_01_004306) do
 
   create_table "states", force: :cascade do |t|
     t.string "name"
@@ -19,6 +19,13 @@ ActiveRecord::Schema.define(version: 2020_01_31_194926) do
     t.string "absentee"
     t.string "next_election"
     t.string "reg_deadlines"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "full_name"
+    t.string "reg_status"
+    t.string "party"
+    t.integer "state_id"
   end
 
 end

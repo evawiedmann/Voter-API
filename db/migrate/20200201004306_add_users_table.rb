@@ -5,5 +5,6 @@ class AddUsersTable < ActiveRecord::Migration[5.2]
       t.column :reg_status, :string
       t.column :party, :string
       t.column :state_id, :integer
+    end
   end
 end
